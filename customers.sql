@@ -3,8 +3,8 @@ select
     customers.name,
     customers.email,
     min(orders.created_at) as first_order_at,
-    count(distinct orders.id) as number_of_orders
-    -- Hello! This line should create a merge conflict :) 
+    count(distinct orders.id) as number_of_orders 
+-- a different comment from Elena
 from `analytics-engineers-club.coffee_shop.customers` customers 
 inner join `analytics-engineers-club.coffee_shop.orders` orders 
 on customers.id = orders.customer_id
